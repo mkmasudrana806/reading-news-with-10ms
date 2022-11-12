@@ -1,4 +1,5 @@
 import React from 'react';
+import Activity from '../activity/Activity';
 import News from '../News/News';
 import Owner from '../Owner/Owner';
 import './Portal.css';
@@ -13,6 +14,7 @@ const Portal = () => {
             <div className='selected-news-activity'>
                 <div className='activity-container'>
                     <Owner></Owner>
+                    <Activity></Activity>
                 </div>
             </div>
         </div>

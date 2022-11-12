@@ -7,13 +7,10 @@
     margin-right: 100px;
     margin-top: 30px;
 }
-.selected-news-activity{
-background-color: cadetblue;
-}
+
 .selected-news-activity div{
     position: sticky;
     top: 0;
-    /* margin: 10px; */
 }
 .activity-container{
     margin: 10px;

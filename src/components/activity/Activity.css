@@ -1,0 +1,29 @@
+.owner-info{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #746f6f2f;
+    border-radius: 10px;
+    color: gray;
+}
+.owner-info span{
+    color: black;
+}
+.break-time{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #746f6f2f;
+    height: 60px;
+    align-items: center;
+    border-radius: 10px;
+}
+.break-time h4{
+    background-color: #f5f5f5d7;
+    padding: 10px 5px;
+    border-radius: 50px;
+    margin: 0;
+  cursor: pointer;
+}
+.break-time h4:hover{
+    color: white;
+    background-color:rgb(8, 67, 230) ;
+}
