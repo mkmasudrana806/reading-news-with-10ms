@@ -1,0 +1,20 @@
+.header-sectoin{
+    background-color: #197748	;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    justify-content: space-between;
+}
+.heading{
+    color: #f5bebe;
+}
+.header-option a{
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.header-option a:hover{
+   color: orange;
+}
