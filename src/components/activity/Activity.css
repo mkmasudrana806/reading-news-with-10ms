@@ -1,21 +1,19 @@
-.owner-info{
+.activity, .break-time, .reading, .break{
     display: flex;
     justify-content: space-evenly;
-    background-color: #746f6f2f;
+    align-items: center;
+    background-color: #88858528;
     border-radius: 10px;
     color: gray;
-}
-.owner-info span{
-    color: black;
-}
-.break-time{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: #746f6f2f;
     height: 60px;
-    align-items: center;
-    border-radius: 10px;
+    margin-top: 30px;
+    padding: 5px;
 }
+.activity span{
+    color: black;
+    font-size: 30px;
+}
+
 .break-time h4{
     background-color: #f5f5f5d7;
     padding: 10px 5px;
@@ -26,4 +24,26 @@
 .break-time h4:hover{
     color: white;
     background-color:rgb(8, 67, 230) ;
+}
+.reading-time{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.reading,.break{
+    display: flex;
+    justify-content: space-between;
+}
+.reading h4,.break h4{
+    margin: 0;
+}
+.btn-activity-completed{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color:#5d25c7;
+    color: white;
+    font-size: 15px;
 }

@@ -8,9 +8,11 @@
     margin-top: 30px;
 }
 
-.selected-news-activity div{
+.activity-container{
     position: sticky;
     top: 0;
+    padding: 20px;
+    background-color: rgb(245, 243, 255);
 }
 .activity-container{
     margin: 10px;

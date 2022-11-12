@@ -13,7 +13,6 @@ const Portal = () => {
             </div>
             <div className='selected-news-activity'>
                 <div className='activity-container'>
-                    <Owner></Owner>
                     <Activity></Activity>
                 </div>
             </div>

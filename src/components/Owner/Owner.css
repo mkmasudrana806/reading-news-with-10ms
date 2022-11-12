@@ -1,6 +1,7 @@
-.owner-info{
+.owner{
     display: flex;
     align-items: center;
+    margin-top: 30px;
 }
 .owner-name{
     margin-bottom: 0px;

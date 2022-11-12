@@ -4,7 +4,7 @@ import './Owner.css';
 const Owner = () => {
     return (
         <div>
-           <div className='owner-info'>
+           <div className='owner'>
            <img className='owner-image' src={owner} alt="" />
            <div>
             <h4 className='owner-name'>Masud Rana</h4>
