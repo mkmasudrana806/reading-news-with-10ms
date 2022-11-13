@@ -1,7 +1,14 @@
 import React from 'react';
+import { act } from 'react-dom/test-utils';
 import Owner from '../Owner/Owner';
 import './Activity.css';
-const Activity = () => {
+const Activity = (props) => {
+    const {activity} = props;
+ 
+    let reading_time = 0;
+for(const news of activity){
+    reading_time = reading_time + parseInt(news.reading_time);
+}
     return (
         <div>
             <div className='activity-info'>
@@ -23,7 +30,7 @@ const Activity = () => {
             <h3 >Reading Time Details</h3>
            <div className='reading'>
             <h4>Reading Time</h4>
-            <h4>200min</h4>
+            <h4>{reading_time}min</h4>
            </div>
         <div className='break'>
             <h4>Break Time</h4>

@@ -1,19 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import SingleNews from '../single-news/SingleNews';
 import './News.css';
 
-const News = () => {
-    const [allNews, setNews] = useState([]);
-    useEffect( () => {
-        fetch('news.json')
-        .then(res => res.json())
-        .then(data => setNews(data))
-    }, [])
+const News = (props) => {
+    const {addToActivity, news} = props;
+    // console.log(addToActivity);
+    // console.log(news);
+    const {type,title,details,image,date,reading_time} = news;
     return (
-        <div className='news-container'>
-            {
-                allNews.map( news => <SingleNews news={news}></SingleNews>)
-            }
+        <div>
+            <div className='single-news'>
+            <div className='news-padding'>
+            <img src={image} alt="" />
+            <h3>Type: {type}</h3>
+            <h4 className='text-ellipsis-1'>{title}</h4>
+            <p className='text-ellipsis-2'>{details}</p>
+            <p><b>Published Date:</b> {date}</p>
+            <p><b>Read in: {reading_time}min</b></p>
+            <button onClick={() => addToActivity(news)}>Read</button>
+            </div>
+        </div>
         </div>
     );
 };
