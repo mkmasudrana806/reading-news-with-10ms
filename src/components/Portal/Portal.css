@@ -6,6 +6,7 @@
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 30px;
+    margin-bottom: 50px;
 }
 .news-container{
     display: grid;
@@ -20,4 +21,46 @@
 }
 .activity-container{
     margin: 10px;
+}
+
+@media screen and (min-width:951px) and (max-width:1100px) {
+    .news-container{
+        grid-template-columns: repeat(2, 1fr);
+        background-color: red;
+    }
+    .activity-container{
+        width: 230px;
+    }
+}
+@media screen and (min-width:779px) and (max-width:950px){
+    .news-container{
+        grid-template-columns: repeat(1, 1fr);
+        background-color: blue;
+    }
+    .activity-container{
+        width: 270px;
+    }
+}
+@media screen and (min-width:600px) and (max-width:778px) {
+    .portal{
+        display: flex;
+        flex-direction: column;
+    }
+    .news-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .activity-container{
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:599px) {
+    .news-container{
+        grid-template-columns: repeat(1, 1fr);
+        background-color: rebeccapurple;
+    }
+    .portal{
+        display: flex;
+        flex-direction: column;
+    }
 }
