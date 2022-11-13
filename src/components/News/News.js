@@ -2,8 +2,6 @@ import './News.css';
 
 const News = (props) => {
     const {addToActivity, news} = props;
-    // console.log(addToActivity);
-    // console.log(news);
     const {type,title,details,image,date,reading_time} = news;
     return (
         <div>

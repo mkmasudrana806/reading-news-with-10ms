@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Activity from '../activity/Activity';
+import Article from '../articles/Article';
 import News from '../News/News';
-// import Owner from '../Owner/Owner';
-// import SingleNews from '../single-news/SingleNews';
 import './Portal.css';
 
 const Portal = () => {
-    // fake data load 
+    // fake data load from json file
     const [allNews, setNews] = useState([]);
     const [activity, setActivity] = useState([]);
     useEffect( () => {
@@ -19,7 +18,6 @@ const Portal = () => {
     const handleToActivity = (news) => {
         let newActivity = [];
         const exits = activity.find( activitynews => activitynews.id===news.id);
-        // check click news already exits or not 
         // if not exits then added it to newActivity
        if(!exits){
            newActivity = [...activity, news];
@@ -40,6 +38,7 @@ const Portal = () => {
                 ></News>)
                }
                 </div>
+               <Article></Article>
             </div>
             <div className='selected-news-activity'>
                 <div className='activity-container'>

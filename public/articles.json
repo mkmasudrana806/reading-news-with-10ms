@@ -1,0 +1,5 @@
+[
+    {"title":"How does React work?","details":"ReactJS divides the UI into isolated reusable pieces of code known as components. React components work similarly to JavaScript functions as they accept arbitrary inputs called properties or props. It's possible to have as many components as necessary without cluttering your code.","id":"234lk324"},
+    {"title":"difference between usestate and useeffect","details":"The useState hook is used for storing variables that are part of your application's state and will change as the user interacts with your website. The useEffect hook allows components to react to lifecycle events such as mounting to the DOM, re-rendering, and unmounting.","id":"k38234"},
+    {"title":"many use of useEffect hooks","details":"The motivation behind the introduction of useEffect Hook is to eliminate the side-effects of using class-based components. For example, tasks like updating the DOM, fetching data from API end-points, setting up subscriptions or timers, etc can be lead to unwarranted side-effects.","id":"h9324h8"}
+]
