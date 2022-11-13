@@ -14,7 +14,7 @@ const News = (props) => {
             <h4 className='text-ellipsis-1'>{title}</h4>
             <p className='text-ellipsis-2'>{details}</p>
             <p><b>Published Date:</b> {date}</p>
-            <p><b>Read in: {reading_time}min</b></p>
+            <p><b>Read in:</b> {reading_time}min</p>
             <button onClick={() => addToActivity(news)}>Read</button>
             </div>
         </div>
