@@ -1,14 +1,27 @@
-import React from 'react';
-import { act } from 'react-dom/test-utils';
+import React, { useState } from 'react';
 import Owner from '../Owner/Owner';
 import './Activity.css';
 const Activity = (props) => {
-    // array destructure and reading time calculate 
     const {activity} = props;
+    //reading time calculate 
     let reading_time = 0;
 for(const news of activity){
     reading_time = reading_time + parseInt(news.reading_time);
 }
+let initialTime = 0;
+// break time calculate
+const [time, setTime] = useState(0);
+// document.getElementById('break-time').addEventListener('click', function(event){
+// const clicked = event.target;
+// console.log(clicked);
+// })
+
+const [breakTime, setBreakTime] = useState(0);
+const handleClick = (event)=> {
+   const newBreakTime = parseInt(event.target.innerText);
+    setBreakTime(newBreakTime);
+  }
+
     return (
         <div>
             <div className='activity-info'>
@@ -19,11 +32,11 @@ for(const news of activity){
                 <h4><span>21</span>yrs age</h4>
             </div>
             <h3>Add A Break time</h3>
-            <div className='break-time'>
-                <h4>10m</h4>
-                <h4>15m</h4>
-                <h4>20m</h4>
-                <h4>25m</h4>
+            <div id='break-time' className='break-time'>
+                <h4 onClick={handleClick}>10m</h4>
+                <h4 onClick={handleClick}>15m</h4>
+                <h4 onClick={handleClick}>20m</h4>
+                <h4 onClick={handleClick}>25m</h4>
             </div>
             <div className='reading-time'>
             <h3 >Reading Time Details</h3>
@@ -33,7 +46,7 @@ for(const news of activity){
            </div>
         <div className='break'>
             <h4><span>Break Time</span></h4>
-            <h4>15 min</h4>
+            <h4>{breakTime} min</h4>
         </div>
             </div>
 <button className='btn-activity-completed'>Activity Compeleted</button>
