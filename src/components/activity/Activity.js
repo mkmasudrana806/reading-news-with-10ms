@@ -1,27 +1,25 @@
 import React, { useState } from 'react';
 import Owner from '../Owner/Owner';
 import './Activity.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Activity = (props) => {
     const {activity} = props;
-    //reading time calculate 
     let reading_time = 0;
 for(const news of activity){
     reading_time = reading_time + parseInt(news.reading_time);
 }
-let initialTime = 0;
-// break time calculate
-const [time, setTime] = useState(0);
-// document.getElementById('break-time').addEventListener('click', function(event){
-// const clicked = event.target;
-// console.log(clicked);
-// })
-
+//when use click break time,then below code will execute
 const [breakTime, setBreakTime] = useState(0);
 const handleClick = (event)=> {
    const newBreakTime = parseInt(event.target.innerText);
     setBreakTime(newBreakTime);
   }
-
+//toast message
+const showToastMessage = () => {
+    toast.success('Activity Completed Successful!', {
+    });
+}
     return (
         <div>
             <div className='activity-info'>
@@ -49,7 +47,11 @@ const handleClick = (event)=> {
             <h4>{breakTime} min</h4>
         </div>
             </div>
-<button className='btn-activity-completed'>Activity Compeleted</button>
+<div>
+<button onClick={showToastMessage}
+ className='btn-activity-completed'>Activity Compeleted</button>
+  <ToastContainer />
+</div>
             </div>
         </div>
     );

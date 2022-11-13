@@ -5,8 +5,8 @@
     background-color: #88858528;
     border-radius: 10px;
     color: gray;
-    height: 60px;
-    margin-top: 30px;
+    height: 55px;
+    margin-top: 20px;
     padding: 5px;
 }
 .activity span{
@@ -29,7 +29,7 @@
     background-color:rgb(8, 67, 230) ;
 }
 .reading-time{
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 .reading,.break{
@@ -43,7 +43,6 @@
     width: 100%;
     height: 50px;
     padding: 10px;
-    margin-top: 10px;
     border: none;
     border-radius: 10px;
     background-color:#5d25c7;
