@@ -17,7 +17,6 @@ const Article = () => {
 };
 
 const LoadArticle = (props) => {
-    console.log(props.article);
     const {title, details} = props.article;
     return (
         <div className='article'>

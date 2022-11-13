@@ -3,6 +3,7 @@ import Owner from '../Owner/Owner';
 import './Activity.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { addToDb } from '../utilities/SetLocalStorage';
 const Activity = (props) => {
     const {activity} = props;
     let reading_time = 0;
@@ -14,6 +15,7 @@ const [breakTime, setBreakTime] = useState(0);
 const handleClick = (event)=> {
    const newBreakTime = parseInt(event.target.innerText);
     setBreakTime(newBreakTime);
+    addToDb(newBreakTime);
   }
 //toast message
 const showToastMessage = () => {
