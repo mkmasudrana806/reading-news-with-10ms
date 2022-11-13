@@ -19,6 +19,8 @@ const Portal = () => {
     const handleToActivity = (news) => {
         let newActivity = [];
         const exits = activity.find( activitynews => activitynews.id===news.id);
+        // check click news already exits or not 
+        // if not exits then added it to newActivity
        if(!exits){
            newActivity = [...activity, news];
            setActivity(newActivity);

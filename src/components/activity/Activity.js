@@ -3,8 +3,8 @@ import { act } from 'react-dom/test-utils';
 import Owner from '../Owner/Owner';
 import './Activity.css';
 const Activity = (props) => {
+    // array destructure and reading time calculate 
     const {activity} = props;
- 
     let reading_time = 0;
 for(const news of activity){
     reading_time = reading_time + parseInt(news.reading_time);
@@ -26,14 +26,13 @@ for(const news of activity){
                 <h4>25m</h4>
             </div>
             <div className='reading-time'>
-
             <h3 >Reading Time Details</h3>
            <div className='reading'>
-            <h4>Reading Time</h4>
+            <h4><span>Reading Time</span></h4>
             <h4>{reading_time}min</h4>
            </div>
         <div className='break'>
-            <h4>Break Time</h4>
+            <h4><span>Break Time</span></h4>
             <h4>15min</h4>
         </div>
             </div>

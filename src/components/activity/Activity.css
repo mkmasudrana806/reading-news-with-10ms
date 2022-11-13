@@ -14,6 +14,9 @@
     font-size: 30px;
 }
 
+.reading span, .break span{
+    color:black;
+}
 .break-time h4{
     background-color: #f5f5f5d7;
     padding: 10px 5px;
